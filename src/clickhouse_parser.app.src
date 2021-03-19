@@ -1,0 +1,11 @@
+{application, clickhouse_parser,
+ [{description, "A parser of ClickHouse statements for Erlang"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib]},
+  {env,[]},
+  {modules, []},
+  {links, []}
+ ]}.
