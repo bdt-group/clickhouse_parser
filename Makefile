@@ -1,6 +1,5 @@
 REBAR ?= rebar3
 PROJECT := clickhouse_parser
-BUILD_IMAGE ?= gitlab.bdt.tools:5000/build-ubuntu1804:1.4.6
 
 .PHONY: compile clean distclean xref dialyze lint test
 
@@ -35,12 +34,3 @@ lint:
 
 release:
 	@$(REBAR) as prod release
-
-# Build in docker environment
-.PHONY: d_sh d_% dc_sh dc_% compose decompose
-
-d_sh:
-	./build-with-env --image $(BUILD_IMAGE) bash
-
-d_%:
-	./build-with-env --image $(BUILD_IMAGE) make $*

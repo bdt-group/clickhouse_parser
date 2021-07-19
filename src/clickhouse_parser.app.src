@@ -7,5 +7,6 @@
     stdlib]},
   {env,[]},
   {modules, []},
-  {links, []}
+  {licenses, ["Apache 2.0"]},
+  {links, [{"GitHub", "https://github.com/bdt-group/clickhouse_parser"}]}
  ]}.
